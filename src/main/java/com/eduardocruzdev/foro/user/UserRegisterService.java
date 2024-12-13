@@ -5,8 +5,10 @@ import com.eduardocruzdev.foro.domain.model.MessageEmail;
 import com.eduardocruzdev.foro.domain.model.User;
 import com.eduardocruzdev.foro.user.email.EmailMessageService;
 
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -57,4 +59,6 @@ public class UserRegisterService {
                 .password(passwordEncoder.encode(form.getPassword()))
                 .build();
     }
+
+
 }

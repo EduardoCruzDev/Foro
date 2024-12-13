@@ -54,51 +54,5 @@ public class User {
     @OneToOne(mappedBy = "user")
     private UserProfile profile;
 
-    public Long getId() {
-        return id;
-    }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public String getSecondaryEmail() {
-        return secondaryEmail;
-    }
-
-    public String getEmailToken() {
-        return emailToken;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public boolean isRemoved() {
-        return removed;
-    }
-
-    public LocalDateTime getActivated() {
-        return activated;
-    }
-
-    public LocalDateTime getLastLogin() {
-        return lastLogin;
-    }
-
-    public Set<Role> getRoles() {
-        return roles;
-    }
-
-    public UserProfile getProfile() {
-        return profile;
-    }
 }
