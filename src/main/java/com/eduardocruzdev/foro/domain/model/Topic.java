@@ -2,10 +2,7 @@ package com.eduardocruzdev.foro.domain.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
 import java.time.LocalDateTime;
@@ -15,6 +12,7 @@ import java.util.List;
 @Entity
 @Table(name="topics")
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(of = "id")
