@@ -24,6 +24,7 @@ public class WebConfiguration implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/avatars/**")
                 .addResourceLocations(
+                        "file:src/main/resources/static/sass/",
                         "file:src/main/resources/uploads/avatars/",
                         "file:src/main/resources/static/img/default-avatars/");
         String userHomePath = System.getProperty("user.home");

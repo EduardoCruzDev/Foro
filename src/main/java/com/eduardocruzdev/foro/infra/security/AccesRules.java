@@ -6,7 +6,10 @@ public class AccesRules {
             "/hello",
             "/login",
             "/error",
-            "/users/**"
+            "/users/**",
+            "/sass/**",
+            "/",
+            "/new-user"
     };
 
     protected static final String[] FOR_AUTHORIZED_USERS = {

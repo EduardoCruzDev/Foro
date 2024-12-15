@@ -41,10 +41,8 @@ public class UserController {
     public String myProfile(Authentication authentication,
                             Model model) {
         String username = authentication.getName();
-        UserProfile userProfile;
-        try {
-            userProfile = userProfileService.findOne(username);
-        } catch (NullPointerException e) {
+        UserProfile userProfile = userProfileService.findOne(username);
+        if (userProfile == null) {
             throw new UserNotFoundException();
         }
         model.addAttribute("userProfile", userProfile);

@@ -17,7 +17,7 @@ import java.util.List;
 public class Section {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(length = 50)
     private String name;

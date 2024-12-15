@@ -1,3 +1,5 @@
+package com.eduardocruzdev.foro;
+
 import com.eduardocruzdev.foro.configuration.Routes;
 import com.eduardocruzdev.foro.domain.dto.UserRegForm;
 import com.eduardocruzdev.foro.domain.model.User;

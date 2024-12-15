@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 
@@ -35,9 +36,10 @@ public class RegisterController {
     }
 
     @PostMapping(value = "/new-user")
-    public String registerNewUser(@Valid UserRegForm registrationForm,
+    public String registerNewUser(@Valid @ModelAttribute("userRegistrationForm") UserRegForm registrationForm,
                                   BindingResult bindingResult, Model model) {
         if (bindingResult.hasErrors()) {
+            log.error("Validation failed: {}", bindingResult.getAllErrors());
             return Routes.NEW_USER_FORM;
         }
         User created = registrationService.registerUser(registrationForm);
